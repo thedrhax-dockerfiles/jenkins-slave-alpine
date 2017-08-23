@@ -4,7 +4,7 @@ MAINTAINER Dmitry Karikh <the.dr.hax@gmail.com>
 
 ENV JENKINS_SLAVE_ROOT="/root/jenkins-slave"
 
-RUN apk --no-cache add openjdk8-jre wget
+RUN apk --no-cache add openjdk8-jre wget git
 
 RUN mkdir -p "$JENKINS_SLAVE_ROOT"
 
