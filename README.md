@@ -1,4 +1,4 @@
-# Jenkins slave with Docker for Docker [![](https://images.microbadger.com/badges/image/thedrhax/jenkins-slave-android.svg)](https://hub.docker.com/r/thedrhax/jenkins-slave-android)
+# Jenkins slave with Docker for Docker [![](https://images.microbadger.com/badges/image/thedrhax/jenkins-slave-docker.svg)](https://hub.docker.com/r/thedrhax/jenkins-slave-docker)
 
 This image extends [docker](https://hub.docker.com/r/_/docker) with Jenkins Swarm module and rancher-compose.
 
