@@ -28,3 +28,12 @@ docker run -it --rm --name slave -e JENKINS_SLAVE_NAME="test" thedrhax/jenkins-s
 * `-e JENKINS_SLAVE_NAME=swarm-$RANDOM` — name of slave displayed in Jenkins
 * `-e JENKINS_SLAVE_WORKERS=1` — number of simultaneously running tasks
 * `-e JENKINS_SLAVE_LABELS` — slave labels which can be used in Jenkins
+
+## Docker & Rancher configuration variables
+
+* `-e DOCKER_HUB_LOGIN="dXNlcm5hbWU6cGFzc3dvcmQ="` — base64 encoded "username:password"
+* `-e DOCKER_HUB_EMAIL="example@example.com"` — your e-mail on Docker Hub
+* `-e RANCHER_URL="http://server_ip:8080/"` — Rancher base URL
+* `-e RANCHER_ACCESS_KEY=""`
+* `-e RANCHER_SECRET_KEY=""`
+    

@@ -15,8 +15,15 @@ ENV JENKINS_MASTER_USERNAME="jenkins" \
     JENKINS_SLAVE_MODE="exclusive" \
     JENKINS_SLAVE_NAME="swarm-$RANDOM" \
     JENKINS_SLAVE_WORKERS="1" \
-    JENKINS_SLAVE_LABELS="" \
-    AVD=""
+    JENKINS_SLAVE_LABELS=""
+
+# Docker & Rancher settings
+ENV DOCKER_HUB_LOGIN="dXNlcm5hbWU6cGFzc3dvcmQ=" \
+    DOCKER_HUB_EMAIL="example@example.com" \
+    RANCHER_URL="http://server_ip:8080/" \
+    RANCHER_ACCESS_KEY="" \
+    RANCHER_SECRET_KEY=""
+
 
 # Install Jenkins slave (swarm)
 ADD swarm.jar /
