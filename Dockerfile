@@ -1,4 +1,4 @@
-FROM docker
+FROM alpine:edge
 
 MAINTAINER Dmitry Karikh <the.dr.hax@gmail.com>
 
@@ -17,23 +17,8 @@ ENV JENKINS_MASTER_USERNAME="jenkins" \
     JENKINS_SLAVE_WORKERS="1" \
     JENKINS_SLAVE_LABELS=""
 
-# Docker & Rancher settings
-ENV DOCKER_HUB_LOGIN="dXNlcm5hbWU6cGFzc3dvcmQ=" \
-    DOCKER_HUB_EMAIL="example@example.com" \
-    RANCHER_URL="http://server_ip:8080/" \
-    RANCHER_ACCESS_KEY="" \
-    RANCHER_SECRET_KEY=""
-
-
 # Install Jenkins slave (swarm)
 ADD swarm.jar /
 ADD entrypoint.sh /
-
-# Install rancher-compose
-RUN wget -O /tmp/rc.tgz https://github.com/rancher/rancher-compose/releases/download/v0.12.5/rancher-compose-linux-amd64-v0.12.5.tar.gz > /tmp/rc.tgz \
- && tar -xzvf /tmp/rc.tgz \
- && mv rancher-compose-v0.12.5/rancher-compose usr/bin \
- && rm -rf rancher-compose-v0.12.5 \
- && rm /tmp/rc.tgz
 
 ENTRYPOINT /entrypoint.sh

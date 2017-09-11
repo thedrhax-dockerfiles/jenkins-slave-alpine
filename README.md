@@ -1,13 +1,13 @@
-# Jenkins slave with Docker for Docker [![](https://images.microbadger.com/badges/image/thedrhax/jenkins-slave-docker.svg)](https://hub.docker.com/r/thedrhax/jenkins-slave-docker)
+# Jenkins slave with Alpine Linux for Docker [![](https://images.microbadger.com/badges/image/thedrhax/jenkins-slave-alpine.svg)](https://hub.docker.com/r/thedrhax/jenkins-slave-alpine)
 
-This image extends [docker](https://hub.docker.com/r/_/docker) with Jenkins Swarm module and rancher-compose.
+This image extends [alpine:edge](https://hub.docker.com/r/_/docker) with Jenkins Swarm module.
 
 ## Example
 
 The command listed below will start a slave named "test" that will try to connect to Jenkins located at http://jenkins:8080/ using `jenkins` as login and password. You can change these settings by overriding variables listed below.
 
 ```
-docker run -it --rm --name slave -e JENKINS_SLAVE_NAME="test" thedrhax/jenkins-slave-docker
+docker run -it --rm --name slave -e JENKINS_SLAVE_NAME="test" thedrhax/jenkins-slave-alpine
 ```
 
 # Advanced options
@@ -29,11 +29,7 @@ docker run -it --rm --name slave -e JENKINS_SLAVE_NAME="test" thedrhax/jenkins-s
 * `-e JENKINS_SLAVE_WORKERS=1` — number of simultaneously running tasks
 * `-e JENKINS_SLAVE_LABELS` — slave labels which can be used in Jenkins
 
-## Docker & Rancher configuration variables
+## Alpine configuration
 
-* `-e DOCKER_HUB_LOGIN="dXNlcm5hbWU6cGFzc3dvcmQ="` — base64 encoded "username:password"
-* `-e DOCKER_HUB_EMAIL="example@example.com"` — your e-mail on Docker Hub
-* `-e RANCHER_URL="http://server_ip:8080/"` — Rancher base URL
-* `-e RANCHER_ACCESS_KEY=""`
-* `-e RANCHER_SECRET_KEY=""`
+* `-e REQUIRED_PACKAGES=""` — package list to be installed when container is started
     
