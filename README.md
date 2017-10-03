@@ -34,3 +34,7 @@ docker run -it --rm --name slave -e JENKINS_SLAVE_NAME="test" thedrhax/jenkins-s
 
 * `-e REQUIRED_PACKAGES=""` — package list to be installed when container is started
     
+
+# License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](./LICENSE) file for details.
