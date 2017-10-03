@@ -24,6 +24,7 @@ docker run -it --rm --name slave -e JENKINS_SLAVE_NAME="test" thedrhax/jenkins-s
 * `-e JENKINS_MASTER_PASSWORD=jenkins` — password for user specified above
 * `-e JENKINS_MASTER_URL=http://jenkins:8080/` — URL of Jenkins
 
+* `-e JENKINS_SLAVE_ROOT=/root/jenkins-slave`
 * `-e JENKINS_SLAVE_MODE=exclusive` — `exclusive` or `normal` are allowed. [[more info]](https://wiki.jenkins-ci.org/display/JENKINS/Swarm+Plugin)
 * `-e JENKINS_SLAVE_NAME=swarm-$RANDOM` — name of slave displayed in Jenkins
 * `-e JENKINS_SLAVE_WORKERS=1` — number of simultaneously running tasks
