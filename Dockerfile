@@ -11,7 +11,7 @@ ENV JENKINS_MASTER_USERNAME="jenkins" \
     JENKINS_SLAVE_NAME="swarm-$RANDOM" \
     JENKINS_SLAVE_WORKERS="1" \
     JENKINS_SLAVE_LABELS="" \
-
+    \
     # Preinstall packages at startup
     # see entrypoint.d/install-packages.sh
     REQUIRED_PACKAGES=""
