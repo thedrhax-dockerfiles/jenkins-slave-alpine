@@ -1,4 +1,5 @@
-FROM alpine:3.11
+ARG BASE_IMAGE_VERSION=3.11
+FROM alpine:${BASE_IMAGE_VERSION}
 
 MAINTAINER Dmitry Karikh <the.dr.hax@gmail.com>
 
