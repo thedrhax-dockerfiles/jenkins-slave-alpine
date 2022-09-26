@@ -11,7 +11,9 @@ ENV MASTER_URL="http://jenkins:8080" \
     # see entrypoint.d/install-packages.sh
     REQUIRED_PACKAGES=""
 
-RUN apk --no-cache add openjdk8-jre wget git
+
+ARG ADD_BUILD_PACKAGES=
+RUN apk --no-cache add openjdk8-jre wget git ${ADD_BUILD_PACKAGES}
 
 ADD root/ /
 
